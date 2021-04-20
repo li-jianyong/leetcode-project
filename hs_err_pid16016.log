@@ -1,0 +1,177 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 335544320 bytes for Failed to commit area from 0x0000000681e00000 to 0x0000000695e00000 of length 335544320.
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   The process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (t:/workspace/hotspot/src/os/windows/vm/os_windows.cpp:3357), pid=16016, tid=12672
+#
+# JRE version:  (9.0+11) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (9.0.1+11, mixed mode, tiered, compressed oops, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -ea -Didea.test.cyclic.buffer.size=1048576 -javaagent:D:\IntelliJ IDEA 2019.3.3\lib\idea_rt.jar=50237:D:\IntelliJ IDEA 2019.3.3\bin -Dfile.encoding=UTF-8 com.intellij.rt.junit.JUnitStarter -ideVersion5 -junit4 com.springbatch.demo.test1.Test1,t7
+
+Host: Intel(R) Core(TM) i7-7500U CPU @ 2.70GHz, 4 cores, 19G,  Windows 10 , 64 bit Build 18362 (10.0.18362.900)
+Time: Mon Sep 28 23:02:32 2020 ?D1¨²¡À¨º¡Á?¨º¡À?? elapsed time: 0 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x0000020ab8a22800):  JavaThread "Unknown thread" [_thread_in_vm, id=12672, stack(0x0000009da1900000,0x0000009da1a00000)]
+
+Stack: [0x0000009da1900000,0x0000009da1a00000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x5870b8]
+V  [jvm.dll+0x69c0ee]
+V  [jvm.dll+0x69d00a]
+V  [jvm.dll+0x69d643]
+V  [jvm.dll+0x21d148]
+V  [jvm.dll+0x584bf4]
+V  [jvm.dll+0x57a005]
+V  [jvm.dll+0x2cd46b]
+V  [jvm.dll+0x2cd3d3]
+V  [jvm.dll+0x2cd2a2]
+V  [jvm.dll+0x2cf2a3]
+V  [jvm.dll+0x319203]
+V  [jvm.dll+0x319916]
+V  [jvm.dll+0x319303]
+V  [jvm.dll+0x2adbf8]
+V  [jvm.dll+0x2aee37]
+V  [jvm.dll+0x67b1ed]
+V  [jvm.dll+0x67c5ac]
+V  [jvm.dll+0x3269c9]
+V  [jvm.dll+0x6653ee]
+V  [jvm.dll+0x391931]
+V  [jvm.dll+0x3938e1]
+C  [java.exe+0x34f1]
+C  [java.exe+0xe24f]
+C  [java.exe+0xe3f6]
+C  [KERNEL32.DLL+0x17bd4]
+C  [ntdll.dll+0x6ce51]
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+
+Other Threads:
+  0x0000020ab8a39000 GCTaskThread "GC Thread#0" [stack: 0x0000009da1a00000,0x0000009da1b00000] [id=1764]
+  0x0000020ab8a3b800 GCTaskThread "GC Thread#1" [stack: 0x0000009da1b00000,0x0000009da1c00000] [id=7492]
+  0x0000020ab8a3d000 GCTaskThread "GC Thread#2" [stack: 0x0000009da1c00000,0x0000009da1d00000] [id=11224]
+  0x0000020ab8a40000 GCTaskThread "GC Thread#3" [stack: 0x0000009da1d00000,0x0000009da1e00000] [id=12136]
+  0x0000020ab8aa4800 ConcurrentGCThread "G1 Main Marker" [stack: 0x0000009da2300000,0x0000009da2400000] [id=1416]
+  0x0000020ab8aa6000 ConcurrentGCThread "G1 Marker#0" [stack: 0x0000009da2400000,0x0000009da2500000] [id=10596]
+  0x0000020ab8a52800 ConcurrentGCThread "G1 Refine#0" [stack: 0x0000009da2100000,0x0000009da2200000] [id=7912]
+  0x0000020ab8a51800 ConcurrentGCThread "G1 Refine#1" [stack: 0x0000009da2000000,0x0000009da2100000] [id=15468]
+  0x0000020ab8a48800 ConcurrentGCThread "G1 Refine#2" [stack: 0x0000009da1f00000,0x0000009da2000000] [id=7804]
+  0x0000020ab8a44800 ConcurrentGCThread "G1 Refine#3" [stack: 0x0000009da1e00000,0x0000009da1f00000] [id=9824]
+  0x0000020ab8a53800 ConcurrentGCThread "G1 Young RemSet Sampling" [stack: 0x0000009da2200000,0x0000009da2300000] [id=8608]
+
+=>0x0000020ab8a22800 (exited) JavaThread "Unknown thread" [_thread_in_vm, id=12672, stack(0x0000009da1900000,0x0000009da1a00000)]
+
+Threads with active compile tasks:
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x0000020ab8a1ef60] Heap_lock - owner thread: 0x0000020ab8a22800
+
+Heap address: 0x0000000681e00000, size: 5090 MB, Compressed Oops mode: Non-zero based: 0x0000000681e00000
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (0 events):
+No events
+
+
+Dynamic libraries:
+0x00007ff61cad0000 - 0x00007ff61cb0e000 	F:\Java\jdk-9.0.1\bin\java.exe
+0x00007ff99e380000 - 0x00007ff99e570000 	C:\Windows\SYSTEM32\ntdll.dll
+0x00007ff99d8a0000 - 0x00007ff99d952000 	C:\Windows\System32\KERNEL32.DLL
+0x00007ff99be60000 - 0x00007ff99c104000 	C:\Windows\System32\KERNELBASE.dll
+0x00007ff99d440000 - 0x00007ff99d4e3000 	C:\Windows\System32\ADVAPI32.dll
+0x00007ff99db20000 - 0x00007ff99dbbe000 	C:\Windows\System32\msvcrt.dll
+0x00007ff99d3a0000 - 0x00007ff99d437000 	C:\Windows\System32\sechost.dll
+0x00007ff99dbf0000 - 0x00007ff99dd10000 	C:\Windows\System32\RPCRT4.dll
+0x00007ff99d550000 - 0x00007ff99d6e4000 	C:\Windows\System32\USER32.dll
+0x00007ff99c360000 - 0x00007ff99c381000 	C:\Windows\System32\win32u.dll
+0x00007ff99cc00000 - 0x00007ff99cc26000 	C:\Windows\System32\GDI32.dll
+0x00007ff99c1c0000 - 0x00007ff99c355000 	C:\Windows\System32\gdi32full.dll
+0x00007ff99c390000 - 0x00007ff99c42e000 	C:\Windows\System32\msvcp_win.dll
+0x00007ff99bd10000 - 0x00007ff99be0a000 	C:\Windows\System32\ucrtbase.dll
+0x00007ff98d3f0000 - 0x00007ff98d674000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.18362.900_none_e6beb9d913147d17\COMCTL32.dll
+0x00007ff98d2e0000 - 0x00007ff98d2ea000 	C:\Windows\SYSTEM32\VERSION.dll
+0x00007ff99c5e0000 - 0x00007ff99c915000 	C:\Windows\System32\combase.dll
+0x00007ff99c140000 - 0x00007ff99c1c0000 	C:\Windows\System32\bcryptPrimitives.dll
+0x00007ff99d7a0000 - 0x00007ff99d7ce000 	C:\Windows\System32\IMM32.DLL
+0x00007ff994d20000 - 0x00007ff994e0f000 	F:\Java\jdk-9.0.1\bin\msvcr120.dll
+0x00007ff994c70000 - 0x00007ff994d16000 	F:\Java\jdk-9.0.1\bin\msvcp120.dll
+0x000000006cc50000 - 0x000000006d674000 	F:\Java\jdk-9.0.1\bin\server\jvm.dll
+0x00007ff99cc30000 - 0x00007ff99cc38000 	C:\Windows\System32\PSAPI.DLL
+0x00007ff9974e0000 - 0x00007ff9974e9000 	C:\Windows\SYSTEM32\WSOCK32.dll
+0x00007ff99d330000 - 0x00007ff99d39f000 	C:\Windows\System32\WS2_32.dll
+0x00007ff997ef0000 - 0x00007ff997f14000 	C:\Windows\SYSTEM32\WINMM.dll
+0x00007ff997ec0000 - 0x00007ff997eed000 	C:\Windows\SYSTEM32\WINMMBASE.dll
+0x00007ff99be10000 - 0x00007ff99be5a000 	C:\Windows\System32\cfgmgr32.dll
+0x00007ff996cb0000 - 0x00007ff996cbf000 	F:\Java\jdk-9.0.1\bin\verify.dll
+0x00007ff996c80000 - 0x00007ff996ca7000 	F:\Java\jdk-9.0.1\bin\java.dll
+0x00007ff994ee0000 - 0x00007ff994f0a000 	F:\Java\jdk-9.0.1\bin\instrument.dll
+0x00007ff996c60000 - 0x00007ff996c76000 	F:\Java\jdk-9.0.1\bin\zip.dll
+0x00007ff996c50000 - 0x00007ff996c5a000 	F:\Java\jdk-9.0.1\bin\jimage.dll
+0x00007ff98d680000 - 0x00007ff98d874000 	C:\Windows\SYSTEM32\dbghelp.dll
+
+VM Arguments:
+jvm_args: -ea -Didea.test.cyclic.buffer.size=1048576 -javaagent:D:\IntelliJ IDEA 2019.3.3\lib\idea_rt.jar=50237:D:\IntelliJ IDEA 2019.3.3\bin -Dfile.encoding=UTF-8 
+java_command: com.intellij.rt.junit.JUnitStarter -ideVersion5 -junit4 com.springbatch.demo.test1.Test1,t7
+java_class_path (initial): D:\IntelliJ IDEA 2019.3.3\lib\idea_rt.jar;D:\IntelliJ IDEA 2019.3.3\plugins\junit\lib\junit5-rt.jar;D:\IntelliJ IDEA 2019.3.3\plugins\junit\lib\junit-rt.jar;E:\sources\github\demo\target\test-classes;E:\sources\github\demo\target\classes;F:\Java\mavenRepo\org\springframework\boot\spring-boot-starter-batch\2.1.6.RELEASE\spring-boot-starter-batch-2.1.6.RELEASE.jar;F:\Java\mavenRepo\org\springframework\boot\spring-boot-starter\2.1.6.RELEASE\spring-boot-starter-2.1.6.RELEASE.jar;F:\Java\mavenRepo\org\springframework\boot\spring-boot-starter-logging\2.1.6.RELEASE\spring-boot-starter-logging-2.1.6.RELEASE.jar;F:\Java\mavenRepo\ch\qos\logback\logback-classic\1.2.3\logback-classic-1.2.3.jar;F:\Java\mavenRepo\ch\qos\logback\logback-core\1.2.3\logback-core-1.2.3.jar;F:\Java\mavenRepo\org\apache\logging\log4j\log4j-to-slf4j\2.11.2\log4j-to-slf4j-2.11.2.jar;F:\Java\mavenRepo\org\apache\logging\log4j\log4j-api\2.11.2\log4j-api-2.11.2.jar;F:\Java\mavenRepo\org\slf4j\jul-to-slf4j\1.7.26\jul-to-slf4j-1.7.26.jar;F:\Java\mavenRepo\javax\annotation\javax.annotation-api\1.3.2\javax.annotation-api-1.3.2.jar;F:\Java\mavenRepo\org\yaml\snakeyaml\1.23\snakeyaml-1.23.jar;F:\Java\mavenRepo\org\springframework\boot\spring-boot-starter-jdbc\2.1.6.RELEASE\spring-boot-starter-jdbc-2.1.6.RELEASE.jar;F:\Java\mavenRepo\com\zaxxer\HikariCP\3.2.0\HikariCP-3.2.0.jar;F:\Java\mavenRepo\org\springframework\batch\spring-batch-core\4.1.2.RELEASE\spring-batch-core-4.1.2.RELEASE.jar;F:\Java\mavenRepo\com\fasterxml\jackson\core\jackson-databind\2.9.9\jackson-databind-2.9.9.jar;F:\Java\mavenRepo\com\fasterxml\jackson\core\jackson-annotations\2.9.0\jackson-annotations-2.9.0.jar;F:\Java\mavenRepo\com\fasterxml\jackson\core\jackson-core\2.9.9\jackson-core-2.9.9.jar;F:\Java\mavenRepo\javax\batch\javax.batch-api\1.0\javax.batch-api-1.0.jar;F:\Java\mavenRepo\org\codehaus\jettison\jettison\1.2\jettison-1.2.jar;F:\Java\mavenRepo\org\springframework\batch\spring-batch-infrastructure\4.1.2.R
+Launcher Type: SUN_STANDARD
+
+Logging:
+Log output configuration:
+#0: stdout all=warning uptime,level,tags
+#1: stderr all=off uptime,level,tags
+
+Environment Variables:
+JAVA_HOME=E:\java8
+PATH=C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;E:\java8\bin;E:\java8\jre\bin;E:\Go\bin;F:\software\apache-maven-3.6.3\bin;F:\nodejs\node_cache;F:\nodejs\node_global;F:\nodejs;D:\mysql-5.7\bin;C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps;C:\Users\Administrator\AppData\Local\Programs\Microsoft VS Code\bin;D:\IDEA\bin;;
+USERNAME=Administrator
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 142 Stepping 9, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10 , 64 bit Build 18362 (10.0.18362.900)
+
+CPU:total 4 (initial active 4) (2 cores per cpu, 2 threads per core) family 6 model 142 stepping 9, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, 3dnowpref, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2, adx, fma
+
+Memory: 4k page, physical 20843236k(11873912k free), swap 33950560k(89476k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (9.0.1+11) for windows-amd64 JRE (9.0.1+11), built on Sep 28 2017 04:54:03 by "mach5one" with MS VC++ 12.0 (VS2013)
+
+END.
