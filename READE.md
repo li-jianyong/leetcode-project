@@ -8,3 +8,8 @@
     
     git log
         git log --pretty=format:"%h - %an, %ar : %s"按照指定的格式显示git日志历史记录形式
+
+    git commit --amend
+        使用场景，第一次提交后，发现有些东西没改完，原本操作又要修改再提交一次，就会有两条提交历史，
+            正确做法，第二次提交时候，使用git commit --amend进入交互界面修改message信息，那么第一次的提交记录就没有了，相当于合并到
+            同一个提交里了；
