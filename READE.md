@@ -6,3 +6,5 @@
         git rm 文件名 --cached 从暂存区移除，工作区保留
         rm 文件名 工作区移除，暂存区保留
     
+    git log
+        git log --pretty=format:"%h - %an, %ar : %s"按照指定的格式显示git日志历史记录形式
