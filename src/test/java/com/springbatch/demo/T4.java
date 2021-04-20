@@ -10,7 +10,7 @@ public class T4 {
     public int maxProfit(int[] nums) {
         int len = nums.length;
         if (len < 2) return 0;
-        // 维持持股和不持股状态
+        // 维持持股和不持股状态!!!~~~~~~
         int[][] dp = new int[len][2];
         dp[0][0]=0;
         dp[0][1]=-nums[0];
