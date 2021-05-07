@@ -1,6 +1,7 @@
 package com.springbatch.demo;
 
 
+import com.springbatch.demo.service.ITestInter;
 import com.springbatch.demo.service.TestService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -30,5 +31,16 @@ public class DemoApplication extends SpringBootServletInitializer implements Com
 		for (TestService testService : serviceLoader) {
 			testService.sel();
 		}
+		printService();
+	}
+	@Autowired
+	private ITestInter service1;
+
+	@Autowired
+	private ITestInter service2;
+
+	public void printService() {
+		System.out.println(service1);
+		System.out.println(service2);
 	}
 }

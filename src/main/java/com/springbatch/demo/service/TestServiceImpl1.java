@@ -1,5 +1,8 @@
 package com.springbatch.demo.service;
 
+import org.springframework.stereotype.Service;
+
+@Service
 public class TestServiceImpl1 implements TestService{
 
     @Override
