@@ -1,6 +1,8 @@
 package com.springbatch.demo;
 
 
+import com.springbatch.demo.service.AbstractAction;
+import com.springbatch.demo.service.ActionImpl;
 import com.springbatch.demo.service.ITestInter;
 import com.springbatch.demo.service.TestService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -42,5 +44,7 @@ public class DemoApplication extends SpringBootServletInitializer implements Com
 	public void printService() {
 		System.out.println(service1);
 		System.out.println(service2);
+		AbstractAction action = new ActionImpl();
+		action.test();
 	}
 }
