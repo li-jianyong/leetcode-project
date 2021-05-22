@@ -27,5 +27,8 @@ public class T4 {
     public void test(){
         int[] nums = {1,5,6,1,4};
         System.out.println(maxProfit(nums));
+        int nThreads = Runtime.getRuntime().availableProcessors();
+        System.out.println("当前核心线程数量" +nThreads);
     }
+
 }
