@@ -3,7 +3,6 @@ package com.springbatch.demo.test2;
 import lombok.val;
 import org.junit.Test;
 
-import java.lang.reflect.Array;
 import java.util.*;
 
 /**

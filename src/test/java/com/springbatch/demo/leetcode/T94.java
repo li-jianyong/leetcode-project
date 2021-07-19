@@ -28,4 +28,16 @@ public class T94 {
         }
         return rs;
     }
+    // 方法2，递归遍历做法
+    public List<Integer> inorderTraversal2(TreeNode root) {
+        List<Integer> res = new ArrayList<Integer>();
+        dfs(res,root);
+        return res;
+    }
+    private void dfs(List<Integer> res,TreeNode root) {
+        if (root == null) return;
+        dfs(res,root.left);
+        res.add(root.val);
+        dfs(res,root.right);
+    }
 }
